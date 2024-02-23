@@ -1,7 +1,7 @@
-# EX : 2c.SIMULATING ARP /RARP PROTOCOLS
+# EX : 2c.SIMULATING ARP/RARP PROTOCOLS
 ## AIM
-To write a python program for simulating ARP protocols using TCP.
-## ALGORITHM:
+To write a python program for simulating ARP protocols using TCP and RARP protocols using UDP.
+## ALGORITHM FOR ARP:
 ## Client:
 1. Start the program
 2. Using socket connection is established between client and server.
@@ -15,8 +15,9 @@ To write a python program for simulating ARP protocols using TCP.
 stored.
 4. Read the IP address which is send by the client.
 5. Map the IP address with its MAC address and return the MAC address to client.
-P
+
 ## PROGRAM - ARP
+### CLIENT
 ```
 import socket
 s=socket.socket()
@@ -31,10 +32,7 @@ while True:
  except KeyError:
  c.send("Not Found".encode())
 ```
-## OUPUT - ARP
-![2c 1](https://github.com/Divya110205/2c.ARP_RARP_PROTOCOLS/assets/119404855/b58b8c77-a937-4957-8272-008fbb6ba8da)
-
-## PROGRAM - RARP
+### SERVER
 ```
 import socket
 s=socket.socket()
@@ -45,8 +43,15 @@ REG NO:
  s.send(ip.encode())
  print("MAC Address",s.recv(1024).decode()
 ```
-## OUPUT -RARP
+## OUPUT - ARP
+### SERVER
+![2c 1](https://github.com/Divya110205/2c.ARP_RARP_PROTOCOLS/assets/119404855/b58b8c77-a937-4957-8272-008fbb6ba8da)
+### CLIENT
 ![2c 2](https://github.com/Divya110205/2c.ARP_RARP_PROTOCOLS/assets/119404855/9036605f-01af-4e34-8483-49126ae2bce2)
+## PROGRAM - RARP
+
+## OUPUT -RARP
+
 
 ## RESULT
 Thus, the python program for simulating ARP protocols using TCP was successfully 
