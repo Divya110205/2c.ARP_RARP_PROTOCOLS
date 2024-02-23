@@ -44,9 +44,9 @@ REG NO:
  print("MAC Address",s.recv(1024).decode()
 ```
 ## OUPUT - ARP
-### SERVER
-![2c 1](https://github.com/Divya110205/2c.ARP_RARP_PROTOCOLS/assets/119404855/b58b8c77-a937-4957-8272-008fbb6ba8da)
 ### CLIENT
+![2c 1](https://github.com/Divya110205/2c.ARP_RARP_PROTOCOLS/assets/119404855/b58b8c77-a937-4957-8272-008fbb6ba8da)
+### SERVER
 ![2c 2](https://github.com/Divya110205/2c.ARP_RARP_PROTOCOLS/assets/119404855/9036605f-01af-4e34-8483-49126ae2bce2)
 ## ALGORITHM FOR RARP:
 ### CLIENT
@@ -61,7 +61,7 @@ REG NO:
 3. Read the MAC address which is send by the client. 
 4. Map the IP address with its MAC address and return the IP address to client.
 ## PROGRAM - RARP
-### SERVER
+### CLIENT
 ```
 import socket 
 s=socket.socket() 
@@ -76,7 +76,7 @@ while True:
             except KeyError: 
                 c.send("Not Found".encode())
 ```     
-### CLIENT
+### SERVER
 ```
 import socket 
 s=socket.socket() 
@@ -87,10 +87,10 @@ while True:
     print("Logical Address",s.recv(1024).decode())
 ```
 ## OUPUT -RARP
-### SERVER
+### CLIENT
 ![2c 3](https://github.com/Divya110205/2c.ARP_RARP_PROTOCOLS/assets/119404855/fbef2bb0-a6cc-463d-bb76-89f75f4a92ef)
 
-### CLIENT
+### SERVER
 ![2c 4](https://github.com/Divya110205/2c.ARP_RARP_PROTOCOLS/assets/119404855/5f6a0540-a321-4d6c-a163-f6df66e44c69)
 
 ## RESULT
